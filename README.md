@@ -52,3 +52,19 @@ void fibonacci(int limit) {
     }
     printf("\n");
     }
+void prime(int limit) {
+    printf("Prime Numbers up to %d:\n", limit);
+    for (int num = 2; num <= limit; num++) {
+        bool isPrime = true;
+        for (int i = 2; i <= sqrt(num); i++) {
+            if (num % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) {
+            printf("%d ", num);
+        }
+    }
+    printf("\n");
+}
